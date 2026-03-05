@@ -72,7 +72,6 @@ nav {
 	background: rgba(245, 245, 247, 0.95);
 	backdrop-filter: blur(10px);
 	z-index: 1000;
-	border-bottom: 1px solid rgba(139, 92, 246, 0.2);
 	border-radius: 0;
 	box-shadow: 0 4px 16px rgba(139, 92, 246, 0.08);
 	display: flex;
@@ -250,145 +249,160 @@ h4 {
 	opacity: 0.8;
 }
 
-/* Timeline Styling */
-.timeline {
-	position: relative;
-	padding: 2rem 0 2rem 3rem;
+/* Experience Styling */
+.experience-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 2rem;
 }
 
-.timeline::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	width: 2px;
-	background: var(--accent-primary);
-	display: none;
-}
-
-.timeline-item {
-	position: relative;
-	margin-bottom: 3rem;
-}
-
-.timeline-marker {
-	position: absolute;
-	left: -2.65rem;
-	top: 0.5rem;
-	width: 14px;
-	height: 14px;
-	background: var(--accent-primary);
-	border: 3px solid var(--bg-primary);
-	border-radius: 50%;
-	box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
-	display: none;
-}
-
-/* Company-specific hover effects */
-#experience .timeline-item:nth-child(1):hover .timeline-content {
-	border-left-color: #0080D0;
-	background: rgba(0, 128, 208, 0.08);
-}
-
-#experience .timeline-item:nth-child(1):hover .timeline-meta h3,
-#experience .timeline-item:nth-child(1):hover .timeline-meta .company {
-	color: #0080D0;
-}
-
-#experience .timeline-item:nth-child(1):hover .timeline-meta .date {
-	color: #2BA84E;
-}
-
-#experience .timeline-item:nth-child(1):hover .timeline-description .role {
-	color: #0080D0;
-}
-
-#experience .timeline-item:nth-child(1):hover .timeline-description .details li {
-	color: #0080D0;
-}
-
-#experience .timeline-item:nth-child(2):hover .timeline-content,
-#experience .timeline-item:nth-child(3):hover .timeline-content {
-	border-left-color: #CC0000;
-	background: rgba(204, 0, 0, 0.08);
-}
-
-#experience .timeline-item:nth-child(2):hover .timeline-meta h3,
-#experience .timeline-item:nth-child(2):hover .timeline-meta .company,
-#experience .timeline-item:nth-child(3):hover .timeline-meta h3,
-#experience .timeline-item:nth-child(3):hover .timeline-meta .company {
-	color: #CC0000;
-}
-
-#experience .timeline-item:nth-child(2):hover .timeline-meta .date,
-#experience .timeline-item:nth-child(3):hover .timeline-meta .date {
-	color: #000000;
-}
-
-#experience .timeline-item:nth-child(2):hover .timeline-description .role,
-#experience .timeline-item:nth-child(3):hover .timeline-description .role {
-	color: #CC0000;
-}
-
-#experience .timeline-item:nth-child(2):hover .timeline-description .details li,
-#experience .timeline-item:nth-child(3):hover .timeline-description .details li {
-	color: #CC0000;
-}
-
-.timeline-content {
+.experience-item {
 	display: grid;
 	grid-template-columns: 250px 1fr;
 	gap: 3rem;
 	align-items: start;
 	border-left: 3px solid transparent;
 	padding-left: 1.5rem;
-	transition: border-color 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-.timeline-meta {
+.experience-item:hover {
+	border-left-color: #0080D0;
+	background: rgba(0, 128, 208, 0.04);
+	padding-left: 2rem;
+}
+
+/* Company-specific hover effects */
+#experience .experience-item:nth-child(1):hover {
+	border-left-color: #0080D0;
+	background: rgba(0, 128, 208, 0.04);
+}
+
+#experience .experience-item:nth-child(1):hover .experience-meta h3,
+#experience .experience-item:nth-child(1):hover .experience-meta .company {
+	color: #0080D0;
+}
+
+#experience .experience-item:nth-child(1):hover .experience-meta .date {
+	color: #2BA84E;
+}
+
+#experience .experience-item:nth-child(1):hover .experience-description .role {
+	color: #0080D0;
+}
+
+#experience .experience-item:nth-child(1):hover .experience-description .details li {
+	color: #0080D0;
+}
+
+#experience .experience-item:nth-child(2):hover {
+	border-left-color: #CC0000;
+	background: rgba(204, 0, 0, 0.04);
+}
+
+#experience .experience-item:nth-child(2):hover .experience-meta h3,
+#experience .experience-item:nth-child(2):hover .experience-meta .company {
+	color: #CC0000;
+}
+
+#experience .experience-item:nth-child(2):hover .experience-meta .date {
+	color: #000000;
+}
+
+#experience .experience-item:nth-child(2):hover .experience-description .role {
+	color: #CC0000;
+}
+
+#experience .experience-item:nth-child(2):hover .experience-description .details li {
+	color: #CC0000;
+}
+
+#experience .experience-item:nth-child(3):hover {
+	border-left-color: #5B84B1;
+	background: rgba(91, 132, 177, 0.04);
+}
+
+#experience .experience-item:nth-child(3):hover .experience-meta h3,
+#experience .experience-item:nth-child(3):hover .experience-meta .company {
+	color: #5B84B1;
+}
+
+#experience .experience-item:nth-child(3):hover .experience-meta .date {
+	color: #000000;
+}
+
+#experience .experience-item:nth-child(3):hover .experience-description .role {
+	color: #5B84B1;
+}
+
+#experience .experience-item:nth-child(3):hover .experience-description .details li {
+	color: #5B84B1;
+}
+
+#experience .experience-item:nth-child(4):hover {
+	border-left-color: #CC0000;
+	background: rgba(204, 0, 0, 0.04);
+}
+
+#experience .experience-item:nth-child(4):hover .experience-meta h3,
+#experience .experience-item:nth-child(4):hover .experience-meta .company {
+	color: #CC0000;
+}
+
+#experience .experience-item:nth-child(4):hover .experience-meta .date {
+	color: #000000;
+}
+
+#experience .experience-item:nth-child(4):hover .experience-description .role {
+	color: #CC0000;
+}
+
+#experience .experience-item:nth-child(4):hover .experience-description .details li {
+	color: #CC0000;
+}
+
+.experience-meta {
 	padding: 0;
 	background: transparent;
-	border-radius: 0;
-	border-left: none;
 }
 
-.timeline-meta h3 {
+.experience-meta h3 {
 	margin: 0 0 0.5rem 0;
 	font-size: 1.25rem;
 	color: var(--accent-primary);
 	transition: color 0.3s ease;
 }
 
-.timeline-meta p {
+.experience-meta p {
 	margin: 0.25rem 0;
 	font-size: 0.95rem;
 	color: var(--text-secondary);
 	transition: color 0.3s ease;
 }
 
-.timeline-meta .company {
+.experience-meta .company {
 	font-weight: 600;
 	color: var(--text-primary);
 }
 
-.timeline-meta .location {
+.experience-meta .location {
 	color: var(--text-secondary);
 	font-size: 0.9rem;
 }
 
-.timeline-meta .date {
+.experience-meta .date {
 	color: var(--accent-secondary);
 	font-size: 0.85rem;
 	margin-top: 0.5rem;
 }
 
-.timeline-description {
+.experience-description {
 	padding: 0;
 	background: transparent;
 }
 
-.timeline-description .role {
+.experience-description .role {
 	font-size: 1.1rem;
 	font-weight: 600;
 	color: var(--accent-primary);
@@ -402,7 +416,7 @@ h4 {
 	margin: 0;
 }
 
-.timeline-description .details li {
+.experience-description .details li {
 	padding-left: 1.5rem;
 	margin-bottom: 0.75rem;
 	position: relative;
@@ -412,8 +426,8 @@ h4 {
 	transition: color 0.3s ease;
 }
 
-.timeline-description .details li::before {
-	content: '▹';
+.experience-description .details li::before {
+	content: '→';
 	position: absolute;
 	left: 0;
 	color: var(--accent-blue);
@@ -509,7 +523,7 @@ ul.details li {
 }
 
 ul.details li::before {
-	content: '▹';
+	content: '→';
 	position: absolute;
 	left: 0;
 	color: var(--accent-blue);
@@ -614,11 +628,13 @@ ul.details li::before {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 2rem;
 	margin-top: 2rem;
+	justify-items: center;
 }
 
 .contact-item {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 1rem;
 	padding: 1.5rem;
 	padding-left: 1.8rem;
@@ -626,6 +642,9 @@ ul.details li::before {
 	border-radius: 0;
 	border-left: 2px solid transparent;
 	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	text-decoration: none;
+	color: var(--text-primary);
+	cursor: pointer;
 }
 
 .contact-item:hover {
@@ -639,14 +658,9 @@ ul.details li::before {
 	color: var(--accent-blue);
 }
 
-.contact-item a {
+.contact-item h4 {
 	color: var(--text-primary);
-	text-decoration: none;
-	transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-	color: var(--accent-secondary);
+	margin: 0;
 }
 
 .section-intro {
@@ -906,19 +920,7 @@ footer p {
 		padding: 3.5rem 1.25rem;
 	}
 
-	.timeline {
-		padding: 2rem 0 2rem 2rem;
-	}
-
-	.timeline-marker {
-		left: -1.85rem;
-	}
-
-	.timeline::before {
-		left: -1px;
-	}
-
-	.timeline-content {
+	.experience-item {
 		grid-template-columns: 1fr;
 		gap: 1rem;
 	}
