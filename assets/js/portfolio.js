@@ -1,14 +1,7 @@
 /**
  * Emily Keeney Portfolio - Interactive Features
- * Handles smooth scrolling, navigation highlighting, and progress bar
+ * Handles smooth scrolling and navigation highlighting
  */
-
-// Smooth scroll progress bar
-window.addEventListener('scroll', () => {
-	const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-	const scrolled = (window.scrollY / windowHeight) * 100;
-	document.getElementById('progressBar').style.width = scrolled + '%';
-});
 
 // Active navigation highlighting
 const sections = document.querySelectorAll('section');
